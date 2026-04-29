@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import logo from "./logo.svg"; // 👉 replace with your uploaded logo file
 
 function App() {
   const targetDate = new Date("June 18, 2026 00:00:00").getTime();
@@ -35,50 +34,42 @@ function App() {
 
   return (
     <div className="main">
-      <div className="glass-card">
+      <div className="container">
         {/* Logo */}
-        <img src={logo} alt="LifeOn+" className="logo" />
+        <img src="/logo.png" alt="LifeOn+" className="logo" />
 
-        {/* Title */}
+        {/* Heading */}
         <h1 className="title">
-          Welcome to the world’s most advanced medical & digital healthcare
-          ecosystem
+          Welcome to the world’s most advanced medical and digital healthcare
+          technological products and services
         </h1>
 
         {/* Subtitle */}
         <p className="subtitle">
-          Experience next-generation health technology. Launching shortly.
+          Come and join us for the experience. Launching shortly.
         </p>
 
         {/* Features */}
         <div className="features">
-          <span>🩺 Digital Emergency Health Kit</span>
-          <span>🔬 Invasive Body Screening</span>
-          <span>📡 Contactless Body Screening</span>
-          <span>⌚ Wearable Digital Products</span>
+          <div className="feature-card">🩺 Digital Emergency Health Kit</div>
+          <div className="feature-card">🔬 Invasive Body Screening</div>
+          <div className="feature-card">
+            📡 Non-invasive and contactless body screening technologies
+          </div>
+          <div className="feature-card">⌚ Wearable Digital Products</div>
         </div>
 
         {/* Coming Soon */}
-        <h2 className="coming">🚀 Coming Soon</h2>
+        <h3 className="coming">🚀 Coming Soon</h3>
 
         {/* Timer */}
         <div className="timer">
-          <div className="time-box">
-            <span>{timeLeft.days}</span>
-            <p>Days</p>
-          </div>
-          <div className="time-box">
-            <span>{timeLeft.hours}</span>
-            <p>Hours</p>
-          </div>
-          <div className="time-box">
-            <span>{timeLeft.minutes}</span>
-            <p>Minutes</p>
-          </div>
-          <div className="time-box">
-            <span>{timeLeft.seconds}</span>
-            <p>Seconds</p>
-          </div>
+          {["Days", "Hours", "Minutes", "Seconds"].map((unit) => (
+            <div key={unit} className="time-box">
+              <span>{timeLeft[unit.toLowerCase()]}</span>
+              <p>{unit}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
