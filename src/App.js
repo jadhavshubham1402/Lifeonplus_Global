@@ -33,43 +33,45 @@ function App() {
   }, [targetDate]);
 
   return (
-    <div className="main">
-      <div className="container">
-        {/* Logo */}
-        <img src="/logo.png" alt="LifeOn+" className="logo" />
+    <div className="main" style={{ backgroundImage: `url(/background.jpeg)` }}>
+      <div className="overlay">
+        <div className="container">
+          {/* Logo */}
+          <img src="/logo.png" alt="LifeOn+" className="logo" />
 
-        {/* Heading */}
-        <h1 className="title">
-          Welcome to the world’s most advanced medical and digital healthcare
-          technological products and services
-        </h1>
+          {/* Heading */}
+          <h1 className="title">
+            Welcome to the world’s most advanced medical and digital healthcare
+            technological products and services
+          </h1>
 
-        {/* Subtitle */}
-        <p className="subtitle">
-          Come and join us for the experience. Launching shortly.
-        </p>
+          {/* Subtitle */}
+          <p className="subtitle">
+            Come and join us for the experience. Launching shortly.
+          </p>
 
-        {/* Features */}
-        <div className="features">
-          <div className="feature-card">🩺 Digital Emergency Health Kit</div>
-          <div className="feature-card">🔬 Invasive Body Screening</div>
-          <div className="feature-card">
-            📡 Non-invasive and contactless body screening technologies
-          </div>
-          <div className="feature-card">⌚ Wearable Digital Products</div>
-        </div>
-
-        {/* Coming Soon */}
-        <h3 className="coming">🚀 Coming Soon</h3>
-
-        {/* Timer */}
-        <div className="timer">
-          {["Days", "Hours", "Minutes", "Seconds"].map((unit) => (
-            <div key={unit} className="time-box">
-              <span>{timeLeft[unit.toLowerCase()]}</span>
-              <p>{unit}</p>
+          {/* Features */}
+          <div className="features">
+            <div className="feature-card">🩺 Digital Emergency Health Kit</div>
+            <div className="feature-card">🔬 Invasive Body Screening</div>
+            <div className="feature-card">
+              📡 Non-invasive and contactless body screening technologies
             </div>
-          ))}
+            <div className="feature-card">⌚ Wearable Digital Products</div>
+          </div>
+
+          {/* Coming Soon */}
+          <h3 className="coming">🚀 Coming Soon</h3>
+
+          {/* Timer */}
+          <div className="timer">
+            {["Days", "Hours", "Minutes", "Seconds"].map((unit) => (
+              <div key={unit} className="time-box">
+                <span>{timeLeft[unit.toLowerCase()]}</span>
+                <p>{unit}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
