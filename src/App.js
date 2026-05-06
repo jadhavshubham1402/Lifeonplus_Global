@@ -36,39 +36,44 @@ function App() {
     <div className="main" style={{ backgroundImage: `url(/background.jpeg)` }}>
       <div className="overlay">
         <div className="container">
-          {/* Logo */}
-          <img src="/logo.png" alt="LifeOn+" className="logo" />
+          <img src="/logo.png" alt="LifeOn+ Global Lifeline" className="logo" />
 
-          {/* Heading */}
           <h1 className="title">
-            Welcome to the world’s most advanced medical and digital healthcare
-            technological products and services
+            Welcome to the world’s most advanced medical and digital
+            <br />
+            healthcare technological products and services
           </h1>
 
-          {/* Subtitle */}
           <p className="subtitle">
             Come and join us for the experience. Launching shortly.
           </p>
 
-          {/* Features */}
           <div className="features">
-            <div className="feature-card">🩺 Digital Emergency Health Kit</div>
-            <div className="feature-card">🔬 Invasive Body Screening</div>
             <div className="feature-card">
-              📡 Non-invasive and contactless body screening technologies
+              <span className="icon">🩺</span>
+              Digital Emergency Health Kit
             </div>
-            <div className="feature-card">⌚ Wearable Digital Products</div>
+            <div className="feature-card">
+              <span className="icon">🔬</span>
+              Invasive Body Screening
+            </div>
+            <div className="feature-card">
+              <span className="icon">📡</span>
+              Non-invasive & Contactless Screening
+            </div>
+            <div className="feature-card">
+              <span className="icon">⌚</span>
+              Wearable Digital Products
+            </div>
           </div>
 
-          {/* Coming Soon */}
           <h3 className="coming">🚀 Coming Soon</h3>
 
-          {/* Timer */}
           <div className="timer">
-            {["Days", "Hours", "Minutes", "Seconds"].map((unit) => (
+            {Object.entries(timeLeft).map(([unit, value]) => (
               <div key={unit} className="time-box">
-                <span>{timeLeft[unit.toLowerCase()]}</span>
-                <p>{unit}</p>
+                <span>{value.toString().padStart(2, "0")}</span>
+                <p>{unit.toUpperCase()}</p>
               </div>
             ))}
           </div>
