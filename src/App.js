@@ -38,34 +38,32 @@ function App() {
         <div className="container">
           <img src="/logo.png" alt="LifeOn+ Global Lifeline" className="logo" />
 
-          <h1 className="title">
+          <h2 className="title">
             Welcome to the world’s most advanced medical and digital
             <br />
             healthcare technological products and services
-          </h1>
+          </h2>
 
           <p className="subtitle">
             Come and join us for the experience. Launching shortly.
           </p>
 
-          <div className="features">
-            <div className="feature-card">
-              <span className="icon">🩺</span>
-              Digital Emergency Health Kit
-            </div>
-            <div className="feature-card">
-              <span className="icon">🔬</span>
-              Invasive Body Screening
-            </div>
-            <div className="feature-card">
-              <span className="icon">📡</span>
-              Non-invasive & Contactless Screening
-            </div>
-            <div className="feature-card">
-              <span className="icon">⌚</span>
-              Wearable Digital Products
-            </div>
+        {/* Features */}
+        <div className="features">
+          <div className="feature-card">🩺 Digital Emergency Health Kit</div>
+
+          <div className="feature-card">🔬 Invasive Body Screening</div>
+
+          <div className="feature-card">📡 Non-invasive Body Screening</div>
+
+          <div className="feature-card">🤖 Contactless / AI Body Screening</div>
+
+          <div className="feature-card">
+            ⌚ Wearable Digital Health Products
           </div>
+
+          <div className="feature-card">🍀 Food Supplements</div>
+        </div>
 
           <h3 className="coming">🚀 Coming Soon</h3>
 
