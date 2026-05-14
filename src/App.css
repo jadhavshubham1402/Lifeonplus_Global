@@ -17,7 +17,7 @@ html,
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-attachment: fixed;
 }
 
@@ -25,7 +25,7 @@ html,
 .overlay {
   width: 100%;
   height: 100%;
-background:     linear-gradient(
+  background: linear-gradient(
       135deg,
       rgba(0, 35, 25, 0.35),
       rgba(0, 45, 35, 0.45)
