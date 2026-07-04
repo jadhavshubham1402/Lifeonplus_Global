@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const targetDate = new Date("June 18, 2026 00:00:00").getTime();
+  const targetDate = new Date("August 25, 2026 00:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
